@@ -1,0 +1,5 @@
+# Pydantic for type-safe configuration management
+pydantic
+# QT bindings for GUI
+PySide6
+PyYAML
