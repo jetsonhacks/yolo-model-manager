@@ -75,5 +75,5 @@ Click the "Build" button for the desired precision to start the conversion proce
 **download_coco128.sh**: Downloads the COCO128 dataset and prepares a calibration YAML file for use with INT8 engine building.
 
 ## Release Notes
-** Initial Release, August 2025 **
+**Initial Release, August 2025**
 * Tested on Jetson Orin Nano, JetPack 6.2.1
