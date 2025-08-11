@@ -93,15 +93,15 @@ class ModelManagerWindow(QMainWindow):
             font-size: 12pt;
             font-weight: bold;
             /* Create space for the title */
-            margin-top: 24px;
+            margin-top: 12px;
             border: 1px solid #C0C0C0;
             border-radius: 8px;
         }
         QGroupBox::title {
             /* Position the title within the margin space */
             subcontrol-origin: margin;
-            subcontrol-position: top left;
-            padding: 0 8px 0 24px;
+            left: 14px;
+            padding: 0 3px 0 3px;
         }
         #engineCard {
             border: 1px solid rgba(0,0,0,0.18);
