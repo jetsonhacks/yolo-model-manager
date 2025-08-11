@@ -1,6 +1,8 @@
 # YOLO Model Manager
 
-A desktop GUI application to simplify the management, downloading, and TensorRT engine conversion of Ultralytics YOLO models. Built with PySide6, this tool provides a user-friendly graphical interface, eliminating the need for complex command-line operations for.
+A desktop GUI application to simplify the management, downloading, and TensorRT engine conversion of Ultralytics YOLO models. Built with PySide6, this tool provides a user-friendly graphical interface, eliminating the need for complex command-line operations for exploring different model sets.
+
+<img src="doc/yolo-model-manager-window.png" width="50%">
 
 ### Note:
 * The .engine files created do not utilize the DLA engines on Jetson NX or AGX. 
