@@ -2,7 +2,7 @@
 
 A desktop GUI application to simplify the management, downloading, and TensorRT engine conversion of Ultralytics YOLO models. Built with PySide6, this tool provides a user-friendly graphical interface, eliminating the need for complex command-line operations for.
 
-### Note
+### Note:
 * The .engine files created do not utilize the DLA engines on Jetson NX or AGX. 
 * The .engine files are Ultralytics format; While they are in TensorRT format, they may not be compatible with the NVIDIA DeepStream framework.
 * It may take significant time to download the YOLO weight files or convert the models to .engine files. These may take several minutes, depending on which options are selected. 
@@ -11,11 +11,10 @@ A desktop GUI application to simplify the management, downloading, and TensorRT 
 ## Features
 
 - **Model Management**: Load, view, and manage a curated list of YOLO models from a `models.json` file.
-- **Model Download**: Download models directly from the Ultralytics repository with real-time log feedback.
+- **Model Download**: Download models directly from the Ultralytics repository.
 - **TensorRT Engine Builder**: Convert downloaded models to TensorRT engines with support for FP32, FP16, and INT8 precision.
-- **INT8 Calibration**: Easily select a calibration dataset (e.g., COCO128) using a YAML file to build highly-optimized INT8 engines.
-- **System Information**: Displays the availability of a CUDA-enabled GPU and TensorRT, providing a quick system readiness check.
-- **Responsive UI**: A multi-threaded architecture ensures the application remains responsive during long-running tasks like downloads and builds.
+- **INT8 Calibration**: Select a calibration dataset (e.g., COCO128) using a YAML file to build highly-optimized INT8 engines.
+- **System Information**: Displays the availability of a CUDA-enabled GPU and TensorRT.
 
 ## Prerequisites
 
@@ -23,6 +22,7 @@ A desktop GUI application to simplify the management, downloading, and TensorRT 
 - NVIDIA GPU with CUDA drivers installed
 - Python 3.10+
 - `uv` package installer (recommended for speed)
+- Ultralytics Yolo
 
 ## Setup
 
@@ -33,8 +33,6 @@ Use the provided scripts to set up the project environment.
 The `setup_yolo_project.sh` script handles the creation of a Python virtual environment, installs the required packages, and configures the environment for TensorRT.
 
 ```bash
-# Create a virtual environment
-python3 -m venv ~/yolo-venv
 # Run the setup script
 ./setup_yolo_project.sh
 ```
@@ -44,19 +42,14 @@ To build INT8 engines, you need a calibration dataset. The download_coco128.sh s
 ./download_coco128.sh
 ```
 ## Usage
-###Running the Application
-Activate the virtual environment:
+### Running the Application
+Activate the virtual environment, and start the application:
 
 ```Bash
 source ~/yolo-venv/bin/activate
-```
-Start the application:
-
-```Bash
-
 python -m model_manager
 ```
-or, you can run shell script which sets the virtual environment and launches the application:
+or, you can run the provided shell script which sets the virtual environment and launches the application:
 ```Bash
 ./model_manager.sh
 ```
